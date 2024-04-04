@@ -1,0 +1,27 @@
+[package]
+name = "facerecog"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+ndarray = "0.15"
+tvm = { path = "/opt/tvm/rust/tvm" }
+tvm-rt = { path = "/opt/tvm/rust/tvm-rt" }
+tvm-sys = { path = "/opt/tvm/rust/tvm-sys" }
+image = "0.24"
+csv = "1.1"
+zip = "0.6"
+anyhow = "^1.0"
+libc = "*"
+once_cell = "*"
+serde = { version = "1.0", features = ["derive"] }
+hyper = { version = "1.0", features = [] }
+# hyper-util = { version = "0.1", features = ["tokio", "server-auto", "http1"] }
+tokio = { version = "1.0", features = ["full"] }
+tower = { version = "0.4", features = ["util"] }
+tower-http = { version = "0.5", features = ["timeout", "trace"] }
+axum =  { version = "0.6" }
+tracing-subscriber = "0.3"
+
+[build-dependencies]
+anyhow = "1.0"
